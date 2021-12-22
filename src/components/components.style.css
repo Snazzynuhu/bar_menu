@@ -1,0 +1,207 @@
+form{
+    box-shadow: 0px 1px 5px 1px;
+    width: 70vw;
+    margin: 2rem auto;
+    padding: 1rem;
+}
+input{
+    border: none;
+    background-color: lightcyan;
+    padding: 0.2rem 1rem;
+    width: 60%;
+}
+.search-btn{
+    border: none;
+    background-color: blue;
+    color: white;border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding: 0.2rem 1rem;
+}
+
+/* COCKTAILS STYLING */
+.cocktail-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.single-cocktail{
+    width: 10rem;
+    min-height:20rem;
+    box-shadow: 0px 1px 3px 1px lightgray;
+    padding: 1rem;
+    margin: 1rem;
+}
+.cocktail-img-box{
+    width:10rem;
+    margin: 0 auto;
+}
+.cocktail-img{
+    width: 100%;
+    border-radius: 1rem;
+}
+
+.loading{
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    margin: 0 auto;
+    border: 5px dashed blue;
+    animation: spin 1s linear infinite;
+}
+@keyframes spin {
+    form{transform: rotate(0deg);}
+    to{transform: rotate(360deg);}
+}
+
+/* NAVBAR */
+.menu{
+    background-color: transparent;
+    border: 1px solid goldenrod;
+    color: goldenrod;
+    padding: 0.3rem 0.5rem 0 0.5rem;
+    font-size: 1.3rem;
+    border-radius: 5px;
+    display: none;
+    animation: bounce 1.5s linear infinite;
+}
+.menu:hover{
+    cursor: pointer;
+}
+@keyframes bounce{
+    0%,100%{
+        transform: scale(0.9);
+    }
+    50%{
+        transform: scale(1.1);
+    }
+}
+.logo{
+    font-size: 2rem;
+    background: linear-gradient(black, goldenrod);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.logo:hover{
+    transform: skew(30deg);
+    cursor: pointer;
+}
+.navbar{
+    box-shadow: 0px 1px 3px 1px lightgray;
+    height: max-content;
+}
+header{
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+ul{
+    list-style: none;
+    display: flex;
+}
+.link-logo{
+    text-decoration: none;
+}
+ul li .link{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: goldenrod;
+    margin-right: 1rem;
+}
+.link:hover{
+    color: white;
+    background-color: goldenrod;
+    padding: 0.2rem 1rem;
+    border-radius: 0.5rem;
+}
+
+/* BOTTTOM LIST */
+
+.list-container{
+height: 0;
+    overflow: hidden;
+    visibility: hidden;
+    transition: height 0.5s ease;
+    display: none;
+}
+.show{
+   height: max-content;
+   visibility: visible;
+}
+.list-container ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.list-container ul li{
+    margin-bottom: 1rem;
+}
+.list-container ul li .list-link{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: goldenrod;
+}
+.list-link:hover{
+    color: white;
+    /* background-color: goldenrod; */
+    padding: 0.2rem 1rem;
+    border: 1px solid goldenrod;
+    border-radius: 0.5rem;
+}
+
+/* MODAL */
+
+.modal-overlay{
+    position: fixed;
+    top: 0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: grid;
+    place-items: center;
+    z-index: -99;
+    opacity: 0;
+    visibility: hidden;
+}
+.show{
+    z-index: 99;
+    opacity: 1;
+    visibility: visible;
+}
+.content-box{
+    width: 400px;
+    background-color: white;
+    border-radius: 1rem;
+    padding: 0.5rem;
+}
+.close-btn{
+    border: none;
+    background: transparent;
+    font-size: 1.5rem;
+    color: red;
+    transition: all 0.5s ease;
+}
+.close-btn:hover{
+    transform: rotate(360deg);
+    cursor: pointer;
+}
+
+
+@media (max-width: 600px){
+    ul li .link{
+    display: none;
+}
+.menu{
+    display: block;
+}
+.list-container{
+    display: block;
+}
+
+}
