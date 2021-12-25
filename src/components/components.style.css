@@ -175,7 +175,7 @@ height: 0;
     visibility: visible;
 }
 .content-box{
-    width: 400px;
+    max-width: 80%;
     background-color: white;
     border-radius: 1rem;
     padding: 0.5rem;
